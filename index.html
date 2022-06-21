@@ -9,8 +9,27 @@
 </head>
 
 <body>
-	<main>
+	<main class="weather_1" id="main_weather_id">
 		<section class="main">
+			<div class="weather_anime">
+				<div class="wa_item wa_01">
+					<img src="img/wa01_sun_02.png" id="wa01_sun_02">
+					<img src="img/wa01_sun_01.png" id="wa01_sun_01">
+					<img src="img/wa01_cloud_01.png" id="wa01_cloud_01">
+					<img src="img/wa01_cloud_02.png" id="wa01_cloud_02">
+					<img src="img/wa01_cloud_03.png" id="wa01_cloud_03">
+				</div>
+				<div class="wa_item wa_02">
+					<img src="img/wa02_rain_01.png" id="wa02_rain_01">
+					<img src="img/wa02_rain_02.png" id="wa02_rain_02">
+					<img src="img/wa02_rain_01.png" id="wa02_rain_03">
+					<img src="img/wa02_cloud_05.png" id="wa02_cloud_05">
+					<img src="img/wa02_cloud_02.png" id="wa02_cloud_02">
+					<img src="img/wa02_cloud_01.png" id="wa02_cloud_01">
+					<img src="img/wa02_cloud_04.png" id="wa02_cloud_04">
+					<img src="img/wa02_cloud_03.png" id="wa02_cloud_03">
+				</div>
+			</div>
 			<div class="header">
 				<div class="weather">
 					<!-- <div class="weather_box">
@@ -91,7 +110,16 @@
 				data: para,
 				async: false,
 				success: res => {
-					console.log(res);
+					console.log(res.Rain);
+					if(res.Rain===true)
+					{
+						$("#main_weather_id").attr('class', 'weather_2');
+
+					}else
+					{
+
+						$("#main_weather_id").attr('class', 'weather_1');
+					}
 					$("#weather_text_temperature").html(res.Temperature + '℃');
 					$("#weather_text_humidity").html(res.Humidity + '%');
 					$("#date_div").html(res.Date);

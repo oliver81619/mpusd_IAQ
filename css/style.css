@@ -52,6 +52,179 @@ main{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.weather_1 .main{
+	background-image: url(../img/wa01_bg.png);
+}
+.weather_2 .main{
+	background-image: url(../img/wa02_bg.png);
+}
+.wa_item{
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+.wa_item img{
+	position: absolute;
+	max-width: none;
+}
+#wa01_sun_01{
+	top: 280px;
+	left: -150px;
+}
+#wa01_sun_02{
+	top: 205px;
+	left: -225px;
+	animation-name: ani_wa01_sun_02;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+}
+@keyframes ani_wa01_sun_02{
+	0% {transform: scale(1); opacity: 1;}
+	50% {transform: scale(0.8); opacity: 0.7;}
+	100% {transform: scale(1); opacity: 1;}
+}
+#wa01_cloud_01{
+	top: 470px;
+	left: -380px;
+	animation-name: ani_wa01_cloud_01;
+	animation-duration: 40s;
+	animation-iteration-count: infinite;
+}
+@keyframes ani_wa01_cloud_01{
+	0% {transform: translateX(100px);}
+	50% {transform: translateX(-500px);}
+	100% {transform: translateX(100px);}
+}
+#wa01_cloud_02{
+	top: 500px;
+	left: 40px;
+	animation-name: ani_wa01_cloud_02;
+	animation-duration: 35s;
+	animation-iteration-count: infinite;
+}
+@keyframes ani_wa01_cloud_02{
+	0% {transform: translateX(-300px);}
+	50% {transform: translateX(300px);}
+	100% {transform: translateX(-300px);}
+}
+#wa01_cloud_03{
+	top: 410px;
+	left: 220px;
+	animation-name: ani_wa01_cloud_03;
+	animation-duration: 45s;
+	animation-iteration-count: infinite;
+}
+@keyframes ani_wa01_cloud_03{
+	0% {transform: translateX(300px);}
+	50% {transform: translateX(-300px);}
+	100% {transform: translateX(300px);}
+}
+
+#wa02_cloud_01{
+	top: 310px;
+	left: -400px;
+	animation-name: ani_wa02_cloud_01;
+	animation-duration: 40s;
+	animation-iteration-count: infinite;
+}
+@keyframes ani_wa02_cloud_01{
+	0% {transform: translateX(0);}
+	50% {transform: translateX(-300px);}
+	100% {transform: translateX(0);}
+}
+#wa02_cloud_02{
+	top: 325px;
+	left: -220px;
+	animation-name: ani_wa02_cloud_02;
+	animation-duration: 42s;
+	animation-iteration-count: infinite;
+	animation-delay: 0.6s;
+}
+@keyframes ani_wa02_cloud_02{
+	0% {transform: translateX(0);}
+	50% {transform: translateX(300px);}
+	100% {transform: translateX(0);}
+}
+#wa02_cloud_03{
+	top: 340px;
+	left: 100px;
+	animation-name: ani_wa02_cloud_03;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+}
+@keyframes ani_wa02_cloud_03{
+	0% {transform: translateX(-200);}
+	50% {transform: translateX(300px);}
+	100% {transform: translateX(-200);}
+}
+#wa02_cloud_04{
+	top: 280px;
+	left: 190px;
+	animation-name: ani_wa02_cloud_01;
+	animation-duration: 45s;
+	animation-iteration-count: infinite;
+	animation-delay: 0.4s;
+}
+#wa02_cloud_05{
+	top: 260px;
+	left: 320px;
+	animation-name: ani_wa02_cloud_05;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+}
+@keyframes ani_wa02_cloud_05{
+	0% {transform: translateX(100px);}
+	50% {transform: translateX(-500px);}
+	100% {transform: translateX(100px);}
+}
+
+#wa02_rain_01{
+	top: 450px;
+	left: -340px;
+	animation: ani_wa02_rain, ani_wa02_rain_opa;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+#wa02_rain_02{
+	top: 450px;
+	left: 130px;
+	animation: ani_wa02_rain, ani_wa02_rain_opa;
+	animation-duration: 2.9s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0.8s;
+	opacity: 0;
+}
+#wa02_rain_03{
+	top: 450px;
+	left: 330px;
+	animation: ani_wa02_rain, ani_wa02_rain_opa;
+	animation-duration: 3.1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0.4s;
+	opacity: 0;
+}
+@keyframes ani_wa02_rain{
+	0% {transform: translate(0, 0);}
+	100% {transform: translate(-70px, 100px);}
+}
+@keyframes ani_wa02_rain_opa{
+	0% {opacity: 0;}
+	15% {opacity: 1;}
+	85% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+
+.weather_1 .wa_02{
+	display: none;
+}
+.weather_2 .wa_01{
+	display: none;
+}
+
 
 /* header */
 .header{
@@ -60,7 +233,7 @@ main{
 .weather{
 	position: absolute;
 	top: 50px;
-	left: 50px;
+	left: 120px;
 	overflow: hidden;
 }
 .weather_box{
